@@ -19,9 +19,9 @@
 >
 > It is published on the **Open VSX Registry**, which VSCodium, Cursor, Windsurf
 > and Gitpod resolve against, so on those editors it installs and updates
-> normally. On Visual Studio Code it installs from the `.vsix` attached to each
-> release here, through the built-in **Install from VSIX** command. Both routes
-> are under [Installation](#installation).
+> normally. On Visual Studio Code itself it installs from the `.vsix` attached
+> to each release here, through the built-in **Install from VSIX** command.
+> See [Which editor am I using?](#which-editor-am-i-using) below.
 >
 > This notice will be removed when the Marketplace listing is available again.
 
@@ -267,11 +267,24 @@ Command Palette → "Tangyr: Toggle Extension (Enable/Disable)" or "Tangyr: Chec
 
 ## Installation
 
+### Which editor am I using?
+
+| Editor                                                                                                               | Method                                                                                                                                                                     |
+| -------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Visual Studio Code** (the official Microsoft build)                                                                | [From a release](#from-a-release) — the Marketplace listing is currently unavailable, see the notice above                                                                 |
+| **VSCodium, Cursor, Windsurf, Gitpod**, or another VS Code fork that resolves extensions against Open VSX by default | [From the Open VSX Registry](#from-the-open-vsx-registry)                                                                                                                  |
+| Not sure                                                                                                             | Open the Extensions view and search for "Tangyr Workbench". If it appears, you are on an Open VSX-resolving editor; use that route. If it does not, use the release route. |
+
+Official Visual Studio Code only ever resolves extensions against the
+Microsoft Marketplace: it does not query Open VSX, with or without this
+notice, so `ext install alessandroraffa.tangyr` only works there once the
+Marketplace listing returns.
+
 ### From the Open VSX Registry
 
-VSCodium, Cursor, Windsurf, Gitpod and other VS Code derivatives resolve against
-Open VSX by default, so on those editors this is an ordinary install, with
-ordinary updates:
+VSCodium, Cursor, Windsurf, Gitpod and other VS Code derivatives resolve
+against Open VSX by default, so on those editors this is an ordinary install,
+with ordinary automatic updates — nothing below is a one-time action:
 
 ```text
 ext install alessandroraffa.tangyr
@@ -281,22 +294,20 @@ Or search for "Tangyr Workbench" in the Extensions view. The extension page is
 <https://open-vsx.org/extension/alessandroraffa/tangyr>.
 
 Open VSX signs the packages it serves, so an install from there is verified the
-same way a registry install normally is.
-
-The namespace currently shows as unverified, and the extension page says so.
-That is a statement about namespace ownership, which is [being
-claimed](https://github.com/EclipseFdn/open-vsx.org/issues/13070), and not about
-the package: ownership is granted by the Eclipse Foundation on request and is
-not required in order to publish.
+same way a registry install normally is. Both the namespace and the extension
+are verified there.
 
 ### From a release
 
-Use this on Visual Studio Code itself, which does not resolve against Open VSX.
-It uses VS Code's own installer — no third-party tool, and no change to any VS
-Code setting.
+Use this on Visual Studio Code itself, which does not resolve against Open
+VSX. It uses VS Code's own installer — no third-party tool, and no change to
+any VS Code setting.
+
+**Installing:**
 
 1. Download `tangyr-<version>.vsix` from the
    [Releases page](https://github.com/alessandroraffa/tangyr-vscode/releases).
+   The topmost release is the current version.
 
 2. Check what you downloaded, if you want to. Every release publishes a
    `tangyr-<version>.vsix.sha256` file next to the package. Download it too,
@@ -316,8 +327,16 @@ Code setting.
      VSIX…** → select the file.
    - From a terminal: `code --install-extension tangyr-<version>.vsix`
 
-An extension installed this way does not update itself. Watch this repository
-for releases to hear about new versions.
+**Updating:** an extension installed this way does not update itself — VS
+Code has no way to know a new version exists unless it comes through the
+Marketplace. To pick up a new version, repeat the three steps above with the
+new release's `.vsix`; installing over an existing version upgrades it in
+place, no uninstall needed. To be notified when a new release is published,
+click **Watch** → **Custom** → **Releases only** on the
+[repository page](https://github.com/alessandroraffa/tangyr-vscode), or check
+the [Releases page](https://github.com/alessandroraffa/tangyr-vscode/releases)
+periodically; the badge near the top of this README always shows the latest
+version number.
 
 One difference worth knowing: extensions installed from a registry carry a
 signature applied by that registry, which the editor verifies at install time.
@@ -338,6 +357,12 @@ Not available at the moment. When it is, the one-line install is:
 ```text
 ext install alessandroraffa.tangyr
 ```
+
+**Already have it installed from before?** It keeps working as-is. VS Code's
+automatic update mechanism has nothing new to fetch while the listing is
+unavailable, so you will not see an update prompt for it until the listing
+returns — this is expected, not a sign that anything is broken on your end.
+Once it does, updates through VS Code resume normally with no action needed.
 
 ## Requirements
 

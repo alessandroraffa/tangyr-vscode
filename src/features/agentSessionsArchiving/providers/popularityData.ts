@@ -65,25 +65,25 @@ const TARGETS_DATA: readonly TargetRecord[] = Object.freeze([
   {
     canonicalName: 'Claude Code',
     providerName: 'claude-code',
-    score: 0.10317460317460318,
+    score: 0.1865079365079365,
     positions: {
-      cli: 0,
+      cli: 0.25,
       ext: 0.16666666666666666,
       stars: 0.14285714285714285,
     },
     signals: {
       cli: {
-        value: 80220622,
+        value: 55802572,
         source: 'npm',
-        period: '2026-09',
+        period: '2026-10',
       },
       ext: {
-        value: 24436488,
+        value: 26726580,
         source: 'marketplace',
         period: 'cumulative',
       },
       stars: {
-        value: 143601,
+        value: 148752,
         source: 'github',
         period: 'cumulative',
       },
@@ -92,25 +92,25 @@ const TARGETS_DATA: readonly TargetRecord[] = Object.freeze([
   {
     canonicalName: 'OpenAI Codex',
     providerName: 'codex',
-    score: 0.31746031746031744,
+    score: 0.20634920634920637,
     positions: {
-      cli: 0.3333333333333333,
+      cli: 0,
       ext: 0.3333333333333333,
       stars: 0.2857142857142857,
     },
     signals: {
       cli: {
-        value: 71337740,
+        value: 88841733,
         source: 'npm',
-        period: '2026-09',
+        period: '2026-10',
       },
       ext: {
-        value: 13694142,
+        value: 14990611,
         source: 'marketplace',
         period: 'cumulative',
       },
       stars: {
-        value: 120532,
+        value: 127448,
         source: 'github',
         period: 'cumulative',
       },
@@ -126,12 +126,12 @@ const TARGETS_DATA: readonly TargetRecord[] = Object.freeze([
     },
     signals: {
       ext: {
-        value: 5164672,
+        value: 5495056,
         source: 'marketplace',
         period: 'cumulative',
       },
       stars: {
-        value: 67254,
+        value: 69636,
         source: 'github',
         period: 'cumulative',
       },
@@ -147,12 +147,12 @@ const TARGETS_DATA: readonly TargetRecord[] = Object.freeze([
     },
     signals: {
       ext: {
-        value: 77942648,
+        value: 78552947,
         source: 'marketplace',
         period: 'cumulative',
       },
       stars: {
-        value: 9974,
+        value: 9965,
         source: 'github',
         period: 'cumulative',
       },
@@ -161,25 +161,25 @@ const TARGETS_DATA: readonly TargetRecord[] = Object.freeze([
   {
     canonicalName: 'OpenCode',
     providerName: 'open-code',
-    score: 0.5555555555555555,
+    score: 0.5,
     positions: {
-      cli: 0.6666666666666666,
+      cli: 0.5,
       ext: 1,
       stars: 0,
     },
     signals: {
       cli: {
-        value: 10280722,
+        value: 9595878,
         source: 'npm',
-        period: '2026-09',
+        period: '2026-10',
       },
       ext: {
-        value: 1058575,
+        value: 1172331,
         source: 'marketplace',
         period: 'cumulative',
       },
       stars: {
-        value: 202905,
+        value: 211209,
         source: 'github',
         period: 'cumulative',
       },
@@ -188,13 +188,19 @@ const TARGETS_DATA: readonly TargetRecord[] = Object.freeze([
   {
     canonicalName: 'Aider',
     providerName: 'aider',
-    score: 0.5714285714285714,
+    score: 0.6607142857142857,
     positions: {
+      cli: 0.75,
       stars: 0.5714285714285714,
     },
     signals: {
+      cli: {
+        value: 267521,
+        source: 'pypi',
+        period: '2026-10',
+      },
       stars: {
-        value: 48636,
+        value: 49302,
         source: 'github',
         period: 'cumulative',
       },
@@ -211,17 +217,17 @@ const TARGETS_DATA: readonly TargetRecord[] = Object.freeze([
     },
     signals: {
       cli: {
-        value: 15120,
+        value: 17951,
         source: 'npm',
-        period: '2026-09',
+        period: '2026-10',
       },
       ext: {
-        value: 4041482,
+        value: 4254823,
         source: 'marketplace',
         period: 'cumulative',
       },
       stars: {
-        value: 35717,
+        value: 36074,
         source: 'github',
         period: 'cumulative',
       },
@@ -237,12 +243,12 @@ const TARGETS_DATA: readonly TargetRecord[] = Object.freeze([
     },
     signals: {
       ext: {
-        value: 1969719,
+        value: 2045453,
         source: 'marketplace',
         period: 'cumulative',
       },
       stars: {
-        value: 24318,
+        value: 24290,
         source: 'github',
         period: 'cumulative',
       },
@@ -254,8 +260,8 @@ const TARGETS_DATA: readonly TargetRecord[] = Object.freeze([
 export const POPULARITY_DATA: PopularityData = Object.freeze({
   resolvedOrder: RESOLVED_ORDER,
   targets: TARGETS_DATA,
-  refreshedAt: '2026-09-01T06:01:07.143Z',
-  refreshPeriod: '2026-09',
+  refreshedAt: '2026-10-01T06:00:44.360Z',
+  refreshPeriod: '2026-10',
   poolSizeAcknowledgment: POOL_SIZE_ACKNOWLEDGMENT,
   disclaimer: DISCLAIMER,
   methodPointer: METHOD_POINTER,

@@ -64,7 +64,7 @@ AI coding assistants store their session files in different locations and format
 
 > **Note:** This popularity order is derived from public signals (downloads, installs, stars) and is not an endorsement, recommendation, or quality judgment of any assistant.
 > Method: [how the order is computed](docs/popularity-ranking-method.md)
-> As of: 2026-09
+> As of: 2026-10
 
 <!-- POPULARITY-TABLE:END -->
 
